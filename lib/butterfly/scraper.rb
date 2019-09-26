@@ -1,0 +1,5 @@
+class Butterfly::Scraper
+  
+
+  
+end
