@@ -1,0 +1,2 @@
+class Butterfly::CLI 
+end
