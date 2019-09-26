@@ -1,5 +1,0 @@
-class Butterfly::Furniture
-  
-
-  
-end
