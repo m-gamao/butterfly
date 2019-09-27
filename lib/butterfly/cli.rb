@@ -7,15 +7,18 @@ class Butterfly::CLI
     puts "* To begin your search, please type 'list' to see a list of product names."
     puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     get_list
+    list_chairs
+    user_selects_chair
     end
 
 # Input: User requests to see list of product names to select from (request_list)
 
   def get_list
-    @chairs = ['list']
+    @chairs = Butterfly::Chair.all 
+    binding.pry
   end
   
-# Output: Show user a list of chairs (show_list)
+# Output: Show user a list of chairs 
   
   def list_chairs
     puts "Choose a product to see information"
@@ -30,7 +33,6 @@ class Butterfly::CLI
     if valid_input(chosen_chair, @chairs)
       show_information_for(chosen_chair)  
     end
-  
   end
   
   def valid_input(input, data)
@@ -38,14 +40,18 @@ class Butterfly::CLI
   end 
 
 # Output: Show information on the chair selected (show_info)
- 
+# use minus 1 in the method because the index of an array always starts at 0 
   def show_information_for(chosen_chair) 
-    chair = @chairs[chosen_chai]
-    put "Here are the details for #{chair}"
-    binding.pry 
+    chair = @chairs[chosen_chair - 1]
+    puts "Here are the details for #{chair}"
+    # To implement
+    #Butterfly::Detail.all.each.with_index(1) do | detail |
+     # puts.detail.name 
+     #end
+     #user_selects_chair
   end
 
 
 end 
 
-end  
+end 

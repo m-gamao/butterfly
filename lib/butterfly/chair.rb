@@ -1,4 +1,4 @@
-class Butterfly::Scraper 
+class Butterfly::Chair
   @@all = []
   attr_accessor :name 
   
@@ -6,7 +6,12 @@ class Butterfly::Scraper
     @name = name 
     save
   end
-
   
+  def self.all
+    @@all
+  end
   
+  def save
+    @@all << self
+  end
 end
