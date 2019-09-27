@@ -1,4 +1,4 @@
-class Butterfly::Product
+class Butterfly::Chair
   attr_accessor :name
   attr_writer :price
   attr_writer :options  
@@ -15,11 +15,9 @@ class Butterfly::Product
   end
   
   def price
-    binding.pry
     Butterfly::Scraper.scrape_price(self) if @@price.empty?
     @price
   end
-  
   
   
   def save
