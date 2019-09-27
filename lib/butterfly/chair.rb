@@ -1,3 +1,5 @@
+#contains all the sofa information
+
 class Butterfly::Chair
   @@all = []
   attr_accessor :name 
@@ -8,6 +10,7 @@ class Butterfly::Chair
   end
   
   def self.all
+    Butterfly::Scraper.scrape_chairs if @@all.empty?
     @@all
   end
   

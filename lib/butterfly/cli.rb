@@ -1,3 +1,5 @@
+#CLI interacts with the user
+
 class Butterfly::CLI 
   
   def call  
@@ -14,8 +16,8 @@ class Butterfly::CLI
 # Input: User requests to see list of product names to select from (request_list)
 
   def get_list
+    Butterfly::Scraper.scrape_chairs
     @chairs = Butterfly::Chair.all 
-    binding.pry
   end
   
 # Output: Show user a list of chairs 
