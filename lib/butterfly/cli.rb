@@ -25,15 +25,27 @@ class Butterfly::CLI
    
 # Input: User selects a chair by number (user_select_product)
   
-  def user_select_product
+  def user_selects_chair
     chosen_chair = gets.strip
-    binding.pry
-    if valid_input(chosen_chair,)
+    if valid_input(chosen_chair, @chairs)
+      show_information_for(chosen_chair)  
+    end
+  
   end
   
-  def valid_input
-    chosen_chair.to_i <= @chairs.length && chosen_chair.to_i < 0 
+  def valid_input(input, data)
+    input.to_i <= data.length && input.to_i > 0 
+  end 
 
 # Output: Show information on the chair selected (show_info)
+ 
+  def show_information_for(chosen_chair) 
+    chair = @chairs[chosen_chai]
+    put "Here are the details for #{chair}"
+    binding.pry 
+  end
+
+
 end 
-end   
+
+end  
