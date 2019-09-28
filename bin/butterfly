@@ -4,4 +4,6 @@ require_relative "../lib/butterfly"
 
 require 'pry'
 
+require 'nokogiri'
+
 Butterfly::CLI.new.call
