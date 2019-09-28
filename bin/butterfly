@@ -2,4 +2,6 @@
 
 require_relative "../lib/butterfly"
 
+require 'pry'
+
 Butterfly::CLI.new.call
