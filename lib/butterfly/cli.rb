@@ -5,9 +5,7 @@ class Butterfly::CLI
   def call  
     puts "**************  Welcome to my furniture shop!  ****************"
     puts "***** Let us help you find the right living room seating for your home. *****"
-    puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     puts "* To begin your search, please type 'list' to see a list of product names."
-    puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     get_list
     list_chairs
     user_selects_chair

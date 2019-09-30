@@ -6,7 +6,7 @@ require_relative "./butterfly/scraper"
 
 
 #requiring pry here allows for the entire lib environment to access pry
-require 'pry'
+#require 'pry'
 
 
 
