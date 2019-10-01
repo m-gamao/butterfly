@@ -23,7 +23,7 @@ class Butterfly::CLI
   def list_chairs
     puts "Choose a product to see information"
     @chairs.each.with_index(1) do |chair, index|
-      puts "#{index}. #{chair}"
+      puts "#{index}. #{chair.name}"
     end
    
 # Input: User selects a chair by number (user_select_product)
