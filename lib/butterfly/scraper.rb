@@ -1,5 +1,5 @@
 class Butterfly::Scraper 
-  attr_accessor :name :info
+  attr_accessor :name, :info
   
   def self.scrape_chairs
     doc = Nokogiri::HTML(open("https://www.roomandboard.com/catalog/living/sofas-and-loveseats"))
@@ -10,6 +10,7 @@ class Butterfly::Scraper
       name = c.text  
       Butterfly::Chair.new(name)
     end
+  end
     
     def self.scrape_details
    doc = Nokogiri::HTML(open("https://www.roomandboard.com/catalog/living/sofas-and-loveseats"))
@@ -19,8 +20,9 @@ class Butterfly::Scraper
    details.each do |d|
      info = d.text
      Butterfly::Details.new(info)
-  end
-end 
+    end
+  end 
+end
 
     
     
