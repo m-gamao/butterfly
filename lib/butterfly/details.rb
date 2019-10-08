@@ -2,10 +2,10 @@
 
 class Butterfly::Details
   @@all = []
-  attr_accessor :details 
+  attr_accessor :detail
   
-  def initialize(details)
-    @details = details
+  def initialize(detail)
+    @detail = detail
     save
   end
   

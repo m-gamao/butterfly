@@ -3,7 +3,7 @@ class Butterfly::Scraper
   
   def self.scrape_chairs
     doc = Nokogiri::HTML(open("https://www.roomandboard.com/catalog/living/sofas-and-loveseats"))
-    
+  
     chairs = doc.css("div.pg-name")
     
     chairs.each do |c|
@@ -15,7 +15,9 @@ class Butterfly::Scraper
     def self.scrape_details
    doc = Nokogiri::HTML(open("https://www.roomandboard.com/catalog/living/sofas-and-loveseats"))
    
-   details = doc.css("div.pg-details div.pg-name div.pg-price-range div.pg-options")
+ 
+   chair_details = Butterfly::Details.new(detail_data)
+   Butterfly::Chair.new(name, chair_details)
    
    details.each do |d|
      details = d.text
@@ -24,7 +26,7 @@ class Butterfly::Scraper
   end 
 end
 
-    
+
     
     
     
