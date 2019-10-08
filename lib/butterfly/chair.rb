@@ -1,5 +1,4 @@
-#contains all the sofa information
-
+#contains all the chair names
 class Butterfly::Chair
   @@all = []
   attr_accessor :name 

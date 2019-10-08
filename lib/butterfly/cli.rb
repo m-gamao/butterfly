@@ -31,7 +31,7 @@ class Butterfly::CLI
   def user_selects_chair
     chosen_chair = gets.strip
     if valid_input(chosen_chair, @chairs)
-      show_information_for(chosen_chair)  
+      show_information_for(chosen_chair)
     end
   end
   
@@ -41,11 +41,11 @@ class Butterfly::CLI
 
 # Output: Show information on the chair selected (show_info)
 # use minus 1 in the method because the index of an array always starts at 0 
-  def show_information_for(chosen_chair) 
-    chair = @chairs[chosen_chair - 1]
+  def show_information_for(chosen_chair)
+    chair = @chairs[chosen_chair.to_i - 1]
     puts "Here are the details for #{chair}"
-    Butterfly::Detail.all.each.with_index(1) do | detail |
-    puts.detail.name 
+    Butterfly::Details.all.each.with_index(1) do | details |
+    puts.details.name 
     end
     user_selects_chair
   end

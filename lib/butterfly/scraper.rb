@@ -18,8 +18,8 @@ class Butterfly::Scraper
    details = doc.css("div.pg-details div.pg-name div.pg-price-range div.pg-options")
    
    details.each do |d|
-     info = d.text
-     Butterfly::Details.new(info)
+     details = d.text
+     Butterfly::Details.new(details)
     end
   end 
 end
