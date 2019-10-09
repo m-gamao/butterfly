@@ -44,8 +44,8 @@ class Butterfly::CLI
   def show_information_for(chosen_chair)
     chair = @chairs[chosen_chair.to_i - 1]
     puts "Here are the details for #{chair}"
-    Butterfly::Details.all.each.with_index(1) do | details |
-    puts.details.name 
+    Butterfly::Details.all.each.with_index(1) do | detail |
+    puts.detail.name 
     end
     user_selects_chair
   end

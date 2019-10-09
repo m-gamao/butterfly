@@ -1,11 +1,10 @@
 #contains all the chair names
 class Butterfly::Chair
   @@all = []
-  attr_accessor :name :details
+  attr_accessor :name  
   
-  def initialize(name, details)
+  def initialize(name)
     @name = name 
-    @details = details
     save
   end
   
