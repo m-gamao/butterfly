@@ -15,7 +15,8 @@ class Butterfly::Scraper
       Butterfly::Chair.new(name, details)
     end
   end
-    
+  end 
+   
   #   def self.scrape_details
   #  doc = Nokogiri::HTML(open("https://www.roomandboard.com/catalog/living/sofas-and-loveseats"))
   # 
