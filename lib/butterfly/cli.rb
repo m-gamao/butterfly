@@ -1,5 +1,6 @@
 #cli.rb
 #CLI interacts with the user
+
 class Butterfly::CLI 
   
   def call  
@@ -10,7 +11,9 @@ class Butterfly::CLI
     list_chairs
     user_selects_chair
     end
+    
 # Input: User requests to see list of product names to select from (request_list)
+
   def get_list
     Butterfly::Scraper.scrape_chairs
     @chairs = Butterfly::Chair.all 
@@ -24,6 +27,7 @@ class Butterfly::CLI
       puts "#{index}. #{chair.name}"
     end
   end
+  
 # Input: User selects a chair by number (user_select_product)
   
   def user_selects_chair
@@ -36,8 +40,12 @@ class Butterfly::CLI
   def valid_input(input, data)
     input.to_i <= data.length && input.to_i > 0 
   end 
+  
+  
 # Output: Show information on the chair selected (show_info)
 # use minus 1 in the method because the index of an array always starts at 0 
+
+
   def show_information_for(chosen_chair)
     chair = @chairs[chosen_chair.to_i - 1]
     
