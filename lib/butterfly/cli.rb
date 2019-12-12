@@ -30,23 +30,22 @@ class Butterfly::CLI
   
   def perform_action
     input = gets.strip
+    while input != 'exit'
     # keeps running until user types exit
       case input
         when 'list'
           list_chairs
-          user_selects_chair
         when 'menu'
           menu
-        when 'exit'
-          goodbye
-      
-        
-        when input.numeric?
-
-          user_selects_chair(chosen_chair)        
+        else
+          user_selects_chair(input)
+          
+        end
+    input = gets.strip   
     end
-    
+    goodbye
   end
+
   
 
   # def get_user_input
